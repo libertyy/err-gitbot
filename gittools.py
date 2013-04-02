@@ -1,12 +1,12 @@
 from datetime import datetime
 from git import *
-from errbot.errBot import PLUGIN_DIR
+from errbot.utils import PLUGINS_SUBDIR
 from errbot.utils import human_name_for_git_url
 import os
 import logging
 import shutil
 
-GIT_LOCAL_STORAGE = PLUGIN_DIR + os.sep + 'git_repos' + os.sep
+GIT_LOCAL_STORAGE = PLUGINS_SUBDIR + os.sep + 'git_repos' + os.sep
 
 def human_to_path(human_name):
     return GIT_LOCAL_STORAGE + human_name
